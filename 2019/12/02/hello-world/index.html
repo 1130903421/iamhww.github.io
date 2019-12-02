@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="微微寒的博客">
 <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2019-12-02T03:23:50.997Z">
+<meta property="og:updated_time" content="2019-12-02T04:09:02.185Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="微微寒的博客" type="application/atom+xml">
@@ -161,7 +161,7 @@
 
         
         <a href="/2019/12/02/hello-world/" class="archive-article-date">
-  	<time datetime="2019-12-02T03:23:50.997Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-02</time>
+  	<time datetime="2019-12-02T04:09:02.185Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-02</time>
 </a>
         
 <!-- 开始添加字数统计-->
@@ -373,6 +373,43 @@
   
 
   
+
+
+  <section id="comments" class="comments">
+    <style>
+      .comments{margin:30px;padding:10px;background:#fff}
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+    </style>
+    <div id="vcomment" class="comment"></div>
+<script src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+<script src='//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+   new Valine({
+            av: AV,
+            el: '#vcomment',
+            notify: notify,
+            verify: verify,
+            app_id: "KNjPB6jyNqshixL2weXxGK1V-gzGzoHsz",
+            app_key: "lYlgnNr70F16Dyy8WxcXRPT5",
+            placeholder: "Just go go",
+            avatar: "mm",
+            avatar_cdn: "",
+            pageSize: 
+    });
+    if(window.location.hash){
+        var checkExist = setInterval(function() {
+           if ($(window.location.hash).length) {
+              $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+              clearInterval(checkExist);
+           }
+        }, 100);
+    }
+</script>
+
+  </section>
 
 
           </div>
